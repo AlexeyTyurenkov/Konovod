@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -653,7 +657,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Konovod" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -665,29 +669,79 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="400"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="dHf-sv-Igi" kind="relationship" relationship="window.shadowedContentViewController" id="RHV-V0-MBn"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="569" y="223"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="D4a-8a-I1J">
+            <objects>
+                <splitViewController id="dHf-sv-Igi" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="kR0-NF-DsO"/>
+                        <splitViewItem id="qEA-l0-rcp"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="xMl-NO-lvd">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="61V-br-Izf" kind="relationship" relationship="splitItems" id="oFN-NU-Eiv"/>
+                        <segue destination="qET-WQ-RLw" kind="relationship" relationship="splitItems" id="hLh-g9-ANs"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="dUZ-no-CQd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="707"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <scene sceneID="Jxs-ry-BQs">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController id="61V-br-Izf" sceneMemberID="viewController">
+                    <view key="view" id="aCc-jW-ZAG">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="z6d-ro-fSt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="745" y="810"/>
+        </scene>
+        <!--Chess Mover View Controller-->
+        <scene sceneID="6N6-Sr-Vv3">
+            <objects>
+                <viewController id="qET-WQ-RLw" customClass="ChessMoverViewController" customModule="Konovod" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="h9R-q9-bHm">
+                        <rect key="frame" x="0.0" y="0.0" width="594" height="507"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="AN8-xX-H6h" customClass="ChessView" customModule="Konovod" customModuleProvider="target">
+                                <rect key="frame" x="59" y="15" width="476" height="477"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AN8-xX-H6h" secondAttribute="height" multiplier="1:1" id="Hs8-Nw-vdp"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="AN8-xX-H6h" firstAttribute="centerX" secondItem="h9R-q9-bHm" secondAttribute="centerX" id="7uX-2c-SW8"/>
+                            <constraint firstItem="AN8-xX-H6h" firstAttribute="centerY" secondItem="h9R-q9-bHm" secondAttribute="centerY" id="NpK-7d-wrM"/>
+                            <constraint firstItem="AN8-xX-H6h" firstAttribute="width" secondItem="h9R-q9-bHm" secondAttribute="width" multiplier="4:5" id="nnD-Qu-YaJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chessView" destination="AN8-xX-H6h" id="480-bc-IAQ"/>
+                    </connections>
+                </viewController>
+                <customObject id="qHo-j6-Xbz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="1391.5"/>
         </scene>
     </scenes>
 </document>

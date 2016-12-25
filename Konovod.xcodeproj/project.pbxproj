@@ -13,6 +13,8 @@
 		D9C1FF5C1E0FC298004B481D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C1FF5A1E0FC298004B481D /* Main.storyboard */; };
 		D9C1FF671E0FC298004B481D /* KonovodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF661E0FC298004B481D /* KonovodTests.swift */; };
 		D9C1FF721E0FC298004B481D /* KonovodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF711E0FC298004B481D /* KonovodUITests.swift */; };
+		D9C1FF841E0FD75A004B481D /* ChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF831E0FD75A004B481D /* ChessView.swift */; };
+		D9C1FF8A1E0FEC36004B481D /* ChessMoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF891E0FEC36004B481D /* ChessMoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		D9C1FF6D1E0FC298004B481D /* KonovodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonovodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C1FF711E0FC298004B481D /* KonovodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonovodUITests.swift; sourceTree = "<group>"; };
 		D9C1FF731E0FC298004B481D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C1FF831E0FD75A004B481D /* ChessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessView.swift; sourceTree = "<group>"; };
+		D9C1FF891E0FEC36004B481D /* ChessMoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessMoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				D9C1FF581E0FC297004B481D /* Assets.xcassets */,
 				D9C1FF5A1E0FC298004B481D /* Main.storyboard */,
 				D9C1FF5D1E0FC298004B481D /* Info.plist */,
+				D9C1FF831E0FD75A004B481D /* ChessView.swift */,
+				D9C1FF891E0FEC36004B481D /* ChessMoverViewController.swift */,
 			);
 			path = Konovod;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 			files = (
 				D9C1FF571E0FC297004B481D /* ViewController.swift in Sources */,
 				D9C1FF551E0FC297004B481D /* AppDelegate.swift in Sources */,
+				D9C1FF841E0FD75A004B481D /* ChessView.swift in Sources */,
+				D9C1FF8A1E0FEC36004B481D /* ChessMoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +504,7 @@
 				D9C1FF781E0FC298004B481D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9C1FF791E0FC298004B481D /* Build configuration list for PBXNativeTarget "KonovodTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +513,7 @@
 				D9C1FF7B1E0FC298004B481D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9C1FF7C1E0FC298004B481D /* Build configuration list for PBXNativeTarget "KonovodUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +522,7 @@
 				D9C1FF7E1E0FC298004B481D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
