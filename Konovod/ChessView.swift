@@ -11,7 +11,8 @@ import Cocoa
 class ChessView: NSView {
 
     var knight:NSView = NSImageView(image: #imageLiteral(resourceName: "normal_white_knight"))
-    var currentKnightPosition: Int? = 4
+    var currentKnightPosition: Int?
+    var visited: [Int] = []
     
     override func draw(_ dirtyRect: NSRect)
     {
@@ -35,7 +36,7 @@ class ChessView: NSView {
             let path = CGMutablePath()
             path.addRect(rect)
             let borderColor = NSColor.red.cgColor
-            var fillColorUI = NSColor.blue
+            var fillColorUI = visited.contains(i) ? NSColor.brown :NSColor.blue
             if (row + col) % 2 == 0
             {
                 fillColorUI = fillColorUI.withAlphaComponent(0.3)
@@ -84,5 +85,10 @@ class ChessView: NSView {
     }
     
     
+    func showMoves(moves: [Int])
+    {
+        visited = moves
+        self.setNeedsDisplay(self.bounds)
+    }
     
 }

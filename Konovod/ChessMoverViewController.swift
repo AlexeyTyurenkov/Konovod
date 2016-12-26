@@ -8,11 +8,14 @@
 
 import Cocoa
 
-class ChessMoverViewController: NSViewController {
+class ChessMoverViewController: NSViewController, KnightSolverDelegate {
 
     @IBOutlet weak var chessView: ChessView!
     
-    
+    @IBOutlet weak var fitnessLabel: NSTextField!
+    @IBOutlet weak var generation: NSTextField!
+    @IBOutlet weak var final: NSTextField!
+    var solver: KnightMoveSolver = GeneticSearch()
     
     
     override func viewDidLoad()
@@ -23,41 +26,24 @@ class ChessMoverViewController: NSViewController {
     
     override func viewDidAppear()
     {
-        showKnight(indexes: [1,2,3,4])
-    }
-    
-    
-    func showKnight(indexes: [Int])
-    {
-        guard let first = indexes.first else { return }
-        var frame = chessView.rectForIndex(index: first)
-        frame.origin.x += chessView.frame.origin.x
-        frame.origin.y += chessView.frame.origin.y
-        let knight = NSImageView(frame: frame)
-        
-        knight.image = #imageLiteral(resourceName: "normal_white_knight")
-        chessView.addSubview(knight)
-        animateMoves(knight: knight, indicies: Array(indexes.dropFirst()))
-    }
-    
-    func animateMoves(knight: NSView, indicies: [Int])
-    {
-        guard let move = indicies.first else { return }
-        chessView.wantsLayer = true;
-        
-        // Set the layer redraw policy. This would be better done in the initialization method of a NSView subclass instead of here.
-        chessView.layerContentsRedrawPolicy = .onSetNeedsDisplay
-        NSAnimationContext.runAnimationGroup({ (context) in
-            context.duration = 1
-            var frame = chessView.rectForIndex(index: move)
-            frame.origin.x += chessView.frame.origin.x
-            frame.origin.y += chessView.frame.origin.y
-            knight.frame = frame
-            chessView.setNeedsDisplay(chessView.frame)
-        }, completionHandler: {
-            self.animateMoves(knight: knight, indicies: Array(indicies.dropFirst()))
+        solver.delegate = self
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async
+        {
+            self.solver.run()
         }
-        )
     }
+    
+    
+    func showSolution(solution: [Int], final: Bool, generation: Int, fitness: String)
+    {
+        DispatchQueue.main.async {
+            self.chessView.showMoves(moves: solution)
+            self.final.isHidden = !final
+            self.generation.stringValue = "\(generation)"
+            self.fitnessLabel.stringValue = fitness
+        }
+        
+    }
+
     
 }

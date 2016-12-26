@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D98271F71E1197B1008F564D /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98271F61E1197B1008F564D /* ControlViewController.swift */; };
+		D98271F91E119DE0008F564D /* MAinSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98271F81E119DE0008F564D /* MAinSplitViewController.swift */; };
 		D9C1FF551E0FC297004B481D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF541E0FC297004B481D /* AppDelegate.swift */; };
 		D9C1FF571E0FC297004B481D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF561E0FC297004B481D /* ViewController.swift */; };
 		D9C1FF591E0FC297004B481D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C1FF581E0FC297004B481D /* Assets.xcassets */; };
@@ -15,6 +17,7 @@
 		D9C1FF721E0FC298004B481D /* KonovodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF711E0FC298004B481D /* KonovodUITests.swift */; };
 		D9C1FF841E0FD75A004B481D /* ChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF831E0FD75A004B481D /* ChessView.swift */; };
 		D9C1FF8A1E0FEC36004B481D /* ChessMoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF891E0FEC36004B481D /* ChessMoverViewController.swift */; };
+		D9C1FF8C1E100B68004B481D /* GeneticSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1FF8B1E100B68004B481D /* GeneticSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D98271F61E1197B1008F564D /* ControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		D98271F81E119DE0008F564D /* MAinSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAinSplitViewController.swift; sourceTree = "<group>"; };
 		D9C1FF511E0FC297004B481D /* Konovod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konovod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C1FF541E0FC297004B481D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C1FF561E0FC297004B481D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		D9C1FF731E0FC298004B481D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9C1FF831E0FD75A004B481D /* ChessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessView.swift; sourceTree = "<group>"; };
 		D9C1FF891E0FEC36004B481D /* ChessMoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessMoverViewController.swift; sourceTree = "<group>"; };
+		D9C1FF8B1E100B68004B481D /* GeneticSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneticSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				D9C1FF5D1E0FC298004B481D /* Info.plist */,
 				D9C1FF831E0FD75A004B481D /* ChessView.swift */,
 				D9C1FF891E0FEC36004B481D /* ChessMoverViewController.swift */,
+				D9C1FF8B1E100B68004B481D /* GeneticSearch.swift */,
+				D98271F61E1197B1008F564D /* ControlViewController.swift */,
+				D98271F81E119DE0008F564D /* MAinSplitViewController.swift */,
 			);
 			path = Konovod;
 			sourceTree = "<group>";
@@ -263,7 +272,10 @@
 			files = (
 				D9C1FF571E0FC297004B481D /* ViewController.swift in Sources */,
 				D9C1FF551E0FC297004B481D /* AppDelegate.swift in Sources */,
+				D9C1FF8C1E100B68004B481D /* GeneticSearch.swift in Sources */,
+				D98271F91E119DE0008F564D /* MAinSplitViewController.swift in Sources */,
 				D9C1FF841E0FD75A004B481D /* ChessView.swift in Sources */,
+				D98271F71E1197B1008F564D /* ControlViewController.swift in Sources */,
 				D9C1FF8A1E0FEC36004B481D /* ChessMoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
